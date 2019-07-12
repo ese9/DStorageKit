@@ -55,8 +55,7 @@ open class TableSection<T: UITableViewCell>: TableSectionConfig, TableCellAction
         return activeRowsCount == 0
     }
     
-
-    override init(priority: Int, minRowsCount: Int = 1, maxRowsCount: Int = 1) {
+    public override init(priority: Int, minRowsCount: Int = 1, maxRowsCount: Int = 1) {
         super.init(priority: priority, minRowsCount: minRowsCount, maxRowsCount: maxRowsCount)
         headerView = self.configureHeader()
         footerView = self.configureFooter()
