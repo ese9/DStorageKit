@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 open class MultiCellWrapperConfig {
-    let cellPriority: Int
+    public let cellPriority: Int
     
     init(priority: Int) {
         self.cellPriority = priority
