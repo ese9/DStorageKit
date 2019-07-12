@@ -30,9 +30,9 @@ open class TableSectionConfig {
     
     let maxRowsForSection: Int
     let minRowsForSection: Int
-    let sectionPriority: Int  // 0 - max priority
+    public let sectionPriority: Int  // 0 - max priority
     
-    init(priority: Int, minRowsCount: Int = 1, maxRowsCount: Int = 1) {
+    public init(priority: Int, minRowsCount: Int = 1, maxRowsCount: Int = 1) {
         self.sectionPriority = priority
         self.minRowsForSection = minRowsCount
         self.maxRowsForSection = maxRowsCount
