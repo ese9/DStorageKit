@@ -1,6 +1,6 @@
 //
 //  SectionFlowProtocol.swift
-//  Pinnacle
+//  DSStorageKit
 //
 //  Created by Roman Novikov on 6/19/19.
 //  Copyright © 2019 SolbegSoft. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SectionTapDelegateProtocol: class {
+public protocol SectionTapDelegateProtocol: class {
     func onHeaderTapped()
     func onFooterTapped()
 }

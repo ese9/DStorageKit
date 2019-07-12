@@ -1,6 +1,6 @@
 //
 //  MultiTableCell.swift
-//  Pinnacle
+//  DSStorageKit
 //
 //  Created by Roman Novikov on 6/28/19.
 //  Copyright © 2019 SolbegSoft. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MultiCellWrapperConfig {
+open class MultiCellWrapperConfig {
     let cellPriority: Int
     
     init(priority: Int) {
@@ -17,7 +17,7 @@ class MultiCellWrapperConfig {
     }
 }
 
-class MultiTableCellWrapper<T: UITableViewCell, U: TableSectionConfig>: MultiCellWrapperConfig, TableCellActionableProtocol {
+open class MultiTableCellWrapper<T: UITableViewCell, U: TableSectionConfig>: MultiCellWrapperConfig, TableCellActionableProtocol {
     weak var wrapperOwner: U?
     var cellType: UITableViewCell.Type { return T.self }
     func onCellAdded(at index: Int, cell: T) {}

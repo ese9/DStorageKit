@@ -1,6 +1,6 @@
 //
 //  MultiTableSection.swift
-//  Pinnacle
+//  DSStorageKit
 //
 //  Created by Roman Novikov on 6/28/19.
 //  Copyright © 2019 SolbegSoft. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MultiTableSection: TableSection<UITableViewCell> {
+open class MultiTableSection: TableSection<UITableViewCell> {
     
     private(set) var wrappers: [TableCellControlableProtocol] = [] {
         didSet {

@@ -1,6 +1,6 @@
 //
 //  TableSection.swift
-//  Pinnacle
+//  DSStorageKit
 //
 //  Created by Roman Novikov on 6/14/19.
 //  Copyright © 2019 SolbegSoft. All rights reserved.
@@ -20,7 +20,7 @@ protocol TableSectionConfigurableProtocol: TableSectionConfig {
     func expandSection()
 }
 
-class TableSectionConfig {
+open class TableSectionConfig {
     var headerView: UIView?
     var footerView: UIView?
     var sectionRowHeight = UITableView.automaticDimension
@@ -39,7 +39,7 @@ class TableSectionConfig {
     }
 }
 
-class TableSection<T: UITableViewCell>: TableSectionConfig, TableCellActionableProtocol {
+open class TableSection<T: UITableViewCell>: TableSectionConfig, TableCellActionableProtocol {
     
     public weak var baseFlowDelegate: BaseFlowDelegate?
     
