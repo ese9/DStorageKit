@@ -1,0 +1,21 @@
+PODS:
+  - DStorageKit (0.0.1)
+
+DEPENDENCIES:
+  - DStorageKit (from `https://github.com/ese9/DStorageKit.git`)
+
+EXTERNAL SOURCES:
+  DStorageKit:
+    :git: https://github.com/ese9/DStorageKit.git
+
+CHECKOUT OPTIONS:
+  DStorageKit:
+    :commit: a2b2e86099238aa840c74a657eed006dac5bc18e
+    :git: https://github.com/ese9/DStorageKit.git
+
+SPEC CHECKSUMS:
+  DStorageKit: 10fd874d62a6897816ea1f0ea8dd1dd9815d1f9a
+
+PODFILE CHECKSUM: 7a945a978a8fb8442c1d5895b5e11213015bcfdf
+
+COCOAPODS: 1.7.4

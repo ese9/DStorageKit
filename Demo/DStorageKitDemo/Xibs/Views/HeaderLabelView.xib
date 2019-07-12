@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderLabelView" customModule="dataSourceProject" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="0gz-jY-BcY" id="H5l-nI-qAz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gz-jY-BcY">
+                    <rect key="frame" x="20" y="10" width="374" height="81"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0gz-jY-BcY" secondAttribute="bottom" constant="10" id="1gK-E8-7f2"/>
+                <constraint firstItem="0gz-jY-BcY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="FxO-cm-a3m"/>
+                <constraint firstAttribute="trailing" secondItem="0gz-jY-BcY" secondAttribute="trailing" constant="20" id="jAs-le-Xab"/>
+                <constraint firstItem="0gz-jY-BcY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="zV3-9g-KhX"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="woO-sr-AZU" appends="YES" id="3ht-nM-Mbs"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-134.26339285714286"/>
+        </view>
+        <tapGestureRecognizer id="woO-sr-AZU">
+            <connections>
+                <action selector="onTapAction:" destination="-1" id="9HV-PM-Ktc"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

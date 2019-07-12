@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SaveUserTableViewCell" rowHeight="97" id="lqw-v2-gyz" customClass="SaveUserTableViewCell" customModule="dataSourceProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lqw-v2-gyz" id="Cam-pi-AMd">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="96.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9Z-Pc-ASW">
+                        <rect key="frame" x="107" y="10" width="200" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="NT9-yd-1wJ"/>
+                            <constraint firstAttribute="height" constant="30" id="gCC-5o-vrG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="Add new contact">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F9Z-Pc-ASW" firstAttribute="top" secondItem="Cam-pi-AMd" secondAttribute="top" constant="10" id="JIE-KQ-mo3"/>
+                    <constraint firstAttribute="bottom" secondItem="F9Z-Pc-ASW" secondAttribute="bottom" constant="10" id="Nrn-2o-yoY"/>
+                    <constraint firstItem="F9Z-Pc-ASW" firstAttribute="centerX" secondItem="Cam-pi-AMd" secondAttribute="centerX" id="T8g-IU-C1M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="saveButton" destination="F9Z-Pc-ASW" id="E2X-dX-HkN"/>
+            </connections>
+            <point key="canvasLocation" x="60.869565217391312" y="539.39732142857144"/>
+        </tableViewCell>
+    </objects>
+</document>

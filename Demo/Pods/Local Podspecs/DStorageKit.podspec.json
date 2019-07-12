@@ -1,0 +1,29 @@
+{
+  "name": "DStorageKit",
+  "version": "0.0.1",
+  "summary": "Library for flexible UITableView control",
+  "homepage": "http://github.com/ese9/DStorageKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Roman Novikov": "n90.roman@gmail.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/ese9/DStorageKit.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "DStorageKit/DataSource",
+    "DStorageKit/DataSource/Protocols/*.swift",
+    "DStorageKit/DataSource/Table/*.swift"
+  ],
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}
