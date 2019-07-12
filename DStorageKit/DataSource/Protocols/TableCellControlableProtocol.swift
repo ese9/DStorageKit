@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TableCellControlableProtocol: MultiCellWrapperConfig {
+public protocol TableCellControlableProtocol: MultiCellWrapperConfig {
     var cellType: UITableViewCell.Type { get }
     func cellAdded(at index: Int, cell: UITableViewCell)
     func cellSelected(at index: Int, cell: UITableViewCell)

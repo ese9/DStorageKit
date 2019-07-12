@@ -18,12 +18,12 @@ open class MultiCellWrapperConfig {
 }
 
 open class MultiTableCellWrapper<T: UITableViewCell, U: TableSectionConfig>: MultiCellWrapperConfig, TableCellActionableProtocol {
-    weak var wrapperOwner: U?
-    var cellType: UITableViewCell.Type { return T.self }
-    func onCellAdded(at index: Int, cell: T) {}
-    func onCellSelected(at index: Int, cell: T) {}
-    func onCellRemoved(at index: Int, cell: T) {}
-    func onCellUpdated(cell: T) {}
+    public weak var wrapperOwner: U?
+    public var cellType: UITableViewCell.Type { return T.self }
+    open func onCellAdded(at index: Int, cell: T) {}
+    open func onCellSelected(at index: Int, cell: T) {}
+    open func onCellRemoved(at index: Int, cell: T) {}
+    open func onCellUpdated(cell: T) {}
     
     init(priority: Int, wrapperOwner: U?) {
         self.wrapperOwner = wrapperOwner
@@ -32,20 +32,20 @@ open class MultiTableCellWrapper<T: UITableViewCell, U: TableSectionConfig>: Mul
 }
 
 extension MultiTableCellWrapper: TableCellControlableProtocol {
-    final func cellAdded(at index: Int, cell: UITableViewCell) {
+    public func cellAdded(at index: Int, cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
         onCellAdded(at: index, cell: validCell)
     }
     
-    final func cellSelected(at index: Int, cell: UITableViewCell) {
+    public func cellSelected(at index: Int, cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
         onCellSelected(at: index, cell: validCell)
     }
-    final func cellRemoved(at index: Int, cell: UITableViewCell) {
+    public func cellRemoved(at index: Int, cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
         onCellRemoved(at: index, cell: validCell)
     }
-    final func cellUpdated(cell: UITableViewCell) {
+    public func cellUpdated(cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
         onCellUpdated(cell: validCell)
     }
