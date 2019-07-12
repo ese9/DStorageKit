@@ -11,17 +11,17 @@ import UIKit
 
 open class TableDataSource: NSObject {
     
-    private(set) var sections: [TableSectionConfigurableProtocol] = [] {
+    public var sections: [TableSectionConfigurableProtocol] = [] {
         didSet {
             sections.sort { $0.sectionPriority < $1.sectionPriority }
         }
     }
     
-    final func addNewSection(_ section: TableSectionConfigurableProtocol) {
+    public func addNewSection(_ section: TableSectionConfigurableProtocol) {
         sections.append(section)
     }
     
-    final func removeSection(at index: Int) {
+    public func removeSection(at index: Int) {
         sections.remove(at: index)
     }
 }

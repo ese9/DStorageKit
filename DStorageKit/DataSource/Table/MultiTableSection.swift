@@ -17,15 +17,15 @@ open class MultiTableSection: TableSection<UITableViewCell> {
         }
     } 
     
-    func addWrapper(wrapper: TableCellControlableProtocol) {
+    final func addWrapper(wrapper: TableCellControlableProtocol) {
         wrappers.append(wrapper)
     }
     
-    func removeWrapper(at index: Int) {
+    final func removeWrapper(at index: Int) {
         wrappers.remove(at: index)
     }
     
-    final override func cellType(for row: Int = 0) -> UITableViewCell.Type {
+    public override func cellType(for row: Int = 0) -> UITableViewCell.Type {
         return wrappers[row].cellType
     }
 }
