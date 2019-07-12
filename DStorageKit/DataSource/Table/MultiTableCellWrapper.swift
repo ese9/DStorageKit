@@ -25,7 +25,7 @@ open class MultiTableCellWrapper<T: UITableViewCell, U: TableSectionConfig>: Mul
     open func onCellRemoved(at index: Int, cell: T) {}
     open func onCellUpdated(cell: T) {}
     
-    init(priority: Int, wrapperOwner: U?) {
+    public init(priority: Int, wrapperOwner: U?) {
         self.wrapperOwner = wrapperOwner
         super.init(priority: priority)
     }
