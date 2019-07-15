@@ -1,6 +1,6 @@
 {
   "name": "DStorageKit",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "summary": "Library for flexible UITableView control",
   "homepage": "http://github.com/ese9/DStorageKit",
   "license": {
@@ -15,12 +15,15 @@
   },
   "source": {
     "git": "https://github.com/ese9/DStorageKit.git",
-    "tag": "1.1.0"
+    "tag": "1.2.2"
   },
   "source_files": [
     "DStorageKit/DataSource",
     "DStorageKit/DataSource/Protocols/*.swift",
-    "DStorageKit/DataSource/Table/*.swift"
+    "DStorageKit/DataSource/Protocols/Section/*.swift",
+    "DStorageKit/DataSource/Table/*.swift",
+    "DStorageKit/DataSource/Table/Section/*.swift",
+    "DStorageKit/DataSource/Table/Wrapper/*.swift"
   ],
   "frameworks": "UIKit",
   "requires_arc": true,

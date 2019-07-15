@@ -1,5 +1,5 @@
 PODS:
-  - DStorageKit (1.1.0)
+  - DStorageKit (1.2.2)
 
 DEPENDENCIES:
   - DStorageKit (from `https://github.com/ese9/DStorageKit.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   DStorageKit:
-    :commit: 567ce2cd6a7c10cbd35488089aa8e1f9c6dde390
+    :commit: 5f0dae021a2b41ddc22d9c0498b5f9f3e0185d95
     :git: https://github.com/ese9/DStorageKit.git
 
 SPEC CHECKSUMS:
-  DStorageKit: 95d148ba401a0eadbaed3a280385b14b73c9f12b
+  DStorageKit: 08c646c0de5e90b26cb3bfadcbb8d284ac6f209a
 
 PODFILE CHECKSUM: 7a945a978a8fb8442c1d5895b5e11213015bcfdf
 

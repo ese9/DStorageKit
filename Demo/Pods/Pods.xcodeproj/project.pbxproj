@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00B8AE74B0C618F0B7E7BDB67C007C57 /* DStorageKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4D1C680A2038A6CBEAD9D377F4BC2E /* DStorageKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B187962F476A173E61D5916187B7F8E /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD361B914FA8EC44EF6307C6B36493 /* TableDataSource.swift */; };
-		15695A12B73BB1AF0892D82965F9F48B /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0D3612B13D7A4EA6035EDB97FE6CA /* TableSection.swift */; };
+		0B2C9DA2E5E2BE3A5669FCE8EE3A8AC5 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C2AE88BC553B8CA39E0417A4E4256C /* TableDataSource.swift */; };
+		11AFAF9F113762BC4CC9AF9FE1221224 /* CellWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034F77C7BE5B1CCF7B49C3B88FA8232 /* CellWrapper.swift */; };
 		40832E0F6952EBE75BBDEE5B2DA3ECB5 /* Pods-DStorageKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B6F2086575DC22531D25FF6A613B8B /* Pods-DStorageKitDemo-dummy.m */; };
-		4987F534C6ED0317C9FFE16782764182 /* SectionTapDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87CDB76E1F3C6A1A159B0200793A3F /* SectionTapDelegateProtocol.swift */; };
-		66411B231D5006A0F0DE3A9F61B3192C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		78C5CD60548D1F62BCFCB67D059FCC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		AE8537EF5FBC303CDA52AA678BF93AEA /* TableCellActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA660EDEE23282DACE7D50D886C42E9 /* TableCellActionableProtocol.swift */; };
-		DA35C4FDDB008CEDB8D1A6FBF4FCDD89 /* BaseFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570731EE9A9C84A7D58641549FF9E3EA /* BaseFlowDelegate.swift */; };
+		6FE853F840312E6C28E9C2C1A277AACC /* DStorageKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2F39B498F4157913F8AD6AB61859AF4 /* DStorageKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73DE99E3042176A431EB207A56BFB3FE /* TableCellActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC2113633A0E213C89C1C6A3B577BC /* TableCellActionableProtocol.swift */; };
+		7523883B2AA227ED000B28749F067EBE /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1506D6FDA609220B5D5922BF861F649F /* TableSection.swift */; };
+		9C593DA0752104ADEC598571F45E3D84 /* TableSectionActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD82B1A450C3DF35B6473CE9B89C6009 /* TableSectionActionableProtocol.swift */; };
+		A51B6384B41AD9DEB9AC37C06E3A38F7 /* BaseFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39662F3F97213B2C0BFA591B683F99F1 /* BaseFlowDelegate.swift */; };
+		BAC972F0B87457A94E304651A0AA9162 /* CellWrapperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E99F6EEED156A429167943C624AA32 /* CellWrapperConfig.swift */; };
+		BB166A314E7133B561823A0A8B82A93B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		BDA8AEF0914A90F9E5020ED3545C625E /* TableCellControlableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B40CA421284F1BB355CE833D1A8B7B /* TableCellControlableProtocol.swift */; };
+		C34F851BA47FAD8AAAE2D99E7F09EBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		D195B6EB203B63A321662DD1E0FCAF2C /* TableSectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612E020508018AFD851D7456B87FE873 /* TableSectionConfig.swift */; };
+		D72B7FD001C36DBC91630085F670715B /* DStorageKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A02FD1D5A71691024B848E388D760CF /* DStorageKit-dummy.m */; };
+		DBF417B7C7970433A4D453AC23182B62 /* MultiTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71EE27C63D58747E4E2C6C83F244FCA /* MultiTableSection.swift */; };
 		E3607018DC701016F797B166C65015C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		F0AC5B830BDB31389283C91CC80E40BA /* Pods-DStorageKitDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8456E850D92272F6200375C71FBA1607 /* Pods-DStorageKitDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1652B8F37D925D4231FCB8527E85635 /* MultiTableCellWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F9CB64609A32C8EB5EDF3C3FC3EE4 /* MultiTableCellWrapper.swift */; };
-		F25135186219DE30C5C40C52D0DCBBAC /* TableCellControlableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7A4D93D2C8B01A943B0F683BF1AB9 /* TableCellControlableProtocol.swift */; };
-		F51151A0339BF638F4ECBBF768EB9B3E /* DStorageKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3676378CB72455FC42B648E0E043B /* DStorageKit-dummy.m */; };
-		FF9A51AF37FE0FAC405B42DA977F2817 /* MultiTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FDCAC84A115883F340EB858FCCE36 /* MultiTableSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,43 +37,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FB7A4D93D2C8B01A943B0F683BF1AB9 /* TableCellControlableProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableCellControlableProtocol.swift; path = DStorageKit/DataSource/Protocols/TableCellControlableProtocol.swift; sourceTree = "<group>"; };
+		1034F77C7BE5B1CCF7B49C3B88FA8232 /* CellWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellWrapper.swift; path = DStorageKit/DataSource/Table/Wrapper/CellWrapper.swift; sourceTree = "<group>"; };
+		1506D6FDA609220B5D5922BF861F649F /* TableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableSection.swift; path = DStorageKit/DataSource/Table/Section/TableSection.swift; sourceTree = "<group>"; };
+		1A02FD1D5A71691024B848E388D760CF /* DStorageKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DStorageKit-dummy.m"; sourceTree = "<group>"; };
 		1B108415B080CA65A2D2E5E5D973D3F8 /* Pods-DStorageKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DStorageKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		1E4D1C680A2038A6CBEAD9D377F4BC2E /* DStorageKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DStorageKit-umbrella.h"; sourceTree = "<group>"; };
 		269184A1BF72D57AB9EA3AA315215737 /* DStorageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DStorageKit.framework; path = DStorageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A8FDCAC84A115883F340EB858FCCE36 /* MultiTableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiTableSection.swift; path = DStorageKit/DataSource/Table/MultiTableSection.swift; sourceTree = "<group>"; };
-		2B87CDB76E1F3C6A1A159B0200793A3F /* SectionTapDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionTapDelegateProtocol.swift; path = DStorageKit/DataSource/Protocols/SectionTapDelegateProtocol.swift; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		33B0E22E6FC2A38619BBDCCB0A790F4D /* Pods-DStorageKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DStorageKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		39662F3F97213B2C0BFA591B683F99F1 /* BaseFlowDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseFlowDelegate.swift; path = DStorageKit/DataSource/Protocols/BaseFlowDelegate.swift; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		570731EE9A9C84A7D58641549FF9E3EA /* BaseFlowDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseFlowDelegate.swift; path = DStorageKit/DataSource/Protocols/BaseFlowDelegate.swift; sourceTree = "<group>"; };
-		6AE3676378CB72455FC42B648E0E043B /* DStorageKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DStorageKit-dummy.m"; sourceTree = "<group>"; };
-		6BA660EDEE23282DACE7D50D886C42E9 /* TableCellActionableProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableCellActionableProtocol.swift; path = DStorageKit/DataSource/Protocols/TableCellActionableProtocol.swift; sourceTree = "<group>"; };
+		43FC2113633A0E213C89C1C6A3B577BC /* TableCellActionableProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableCellActionableProtocol.swift; path = DStorageKit/DataSource/Protocols/TableCellActionableProtocol.swift; sourceTree = "<group>"; };
+		5808D06358DA90C55B4F24E6DDA65760 /* DStorageKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DStorageKit-Info.plist"; sourceTree = "<group>"; };
+		612E020508018AFD851D7456B87FE873 /* TableSectionConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableSectionConfig.swift; path = DStorageKit/DataSource/Table/Section/TableSectionConfig.swift; sourceTree = "<group>"; };
+		69C2AE88BC553B8CA39E0417A4E4256C /* TableDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableDataSource.swift; path = DStorageKit/DataSource/Table/TableDataSource.swift; sourceTree = "<group>"; };
 		7D790B1CA054044699F3A943EC8975FF /* Pods-DStorageKitDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DStorageKitDemo-Info.plist"; sourceTree = "<group>"; };
 		7DC005FC57289D21CBF26ABCE5B27BF6 /* Pods-DStorageKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DStorageKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		821EE0DC7D0D946907752AA8CAE5291B /* Pods-DStorageKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DStorageKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		8456E850D92272F6200375C71FBA1607 /* Pods-DStorageKitDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DStorageKitDemo-umbrella.h"; sourceTree = "<group>"; };
-		862CB779D663721697EF1A0EE5F876DD /* DStorageKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DStorageKit-prefix.pch"; sourceTree = "<group>"; };
+		8897E23B8CAC864DF0B7971E6D541CFC /* DStorageKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DStorageKit-prefix.pch"; sourceTree = "<group>"; };
 		8970A7B5CA3F2A3C5EDC8E668BA6F1F0 /* Pods-DStorageKitDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DStorageKitDemo-frameworks.sh"; sourceTree = "<group>"; };
 		9146B175FCE5EDD47E438C765AFDC0C0 /* Pods-DStorageKitDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DStorageKitDemo.modulemap"; sourceTree = "<group>"; };
+		92DF11D90D3BEC4521092A96396A99EE /* DStorageKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DStorageKit.xcconfig; sourceTree = "<group>"; };
 		9B4E676FFBA97328E1FCD79D2E161D25 /* Pods_DStorageKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DStorageKitDemo.framework; path = "Pods-DStorageKitDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5DD361B914FA8EC44EF6307C6B36493 /* TableDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableDataSource.swift; path = DStorageKit/DataSource/Table/TableDataSource.swift; sourceTree = "<group>"; };
-		B48673D9372A670575BCA5D0A2F07AF4 /* DStorageKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DStorageKit.xcconfig; sourceTree = "<group>"; };
-		CFE0D3612B13D7A4EA6035EDB97FE6CA /* TableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableSection.swift; path = DStorageKit/DataSource/Table/TableSection.swift; sourceTree = "<group>"; };
+		A2F39B498F4157913F8AD6AB61859AF4 /* DStorageKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DStorageKit-umbrella.h"; sourceTree = "<group>"; };
+		AD82B1A450C3DF35B6473CE9B89C6009 /* TableSectionActionableProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableSectionActionableProtocol.swift; path = DStorageKit/DataSource/Protocols/Section/TableSectionActionableProtocol.swift; sourceTree = "<group>"; };
+		B3B40CA421284F1BB355CE833D1A8B7B /* TableCellControlableProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableCellControlableProtocol.swift; path = DStorageKit/DataSource/Protocols/TableCellControlableProtocol.swift; sourceTree = "<group>"; };
 		D3B6F2086575DC22531D25FF6A613B8B /* Pods-DStorageKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DStorageKitDemo-dummy.m"; sourceTree = "<group>"; };
-		DC4F9CB64609A32C8EB5EDF3C3FC3EE4 /* MultiTableCellWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiTableCellWrapper.swift; path = DStorageKit/DataSource/Table/MultiTableCellWrapper.swift; sourceTree = "<group>"; };
-		F2297C1400CB8CB58261F4F12CB04545 /* DStorageKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DStorageKit-Info.plist"; sourceTree = "<group>"; };
-		F5AB5298C24726AF0CE96D8D21386CC8 /* DStorageKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DStorageKit.modulemap; sourceTree = "<group>"; };
+		E6E99F6EEED156A429167943C624AA32 /* CellWrapperConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellWrapperConfig.swift; path = DStorageKit/DataSource/Table/Wrapper/CellWrapperConfig.swift; sourceTree = "<group>"; };
+		EE87EC2F4EE1DAAF2B0D0F59FF2D54B8 /* DStorageKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DStorageKit.modulemap; sourceTree = "<group>"; };
+		F71EE27C63D58747E4E2C6C83F244FCA /* MultiTableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiTableSection.swift; path = DStorageKit/DataSource/Table/Section/MultiTableSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B7A418C2A0D43E2CC4836BEF2DC7D928 /* Frameworks */ = {
+		38655588DAA08F80C87C50F0F23BBBDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66411B231D5006A0F0DE3A9F61B3192C /* Foundation.framework in Frameworks */,
-				78C5CD60548D1F62BCFCB67D059FCC59 /* UIKit.framework in Frameworks */,
+				C34F851BA47FAD8AAAE2D99E7F09EBDF /* Foundation.framework in Frameworks */,
+				BB166A314E7133B561823A0A8B82A93B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,43 +98,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		438CE3B0A026589B01150DCD924DFAA3 /* Support Files */ = {
+		1DBE967EC9297300F4B7FEAA8B18A35A /* DStorageKit */ = {
 			isa = PBXGroup;
 			children = (
-				F5AB5298C24726AF0CE96D8D21386CC8 /* DStorageKit.modulemap */,
-				B48673D9372A670575BCA5D0A2F07AF4 /* DStorageKit.xcconfig */,
-				6AE3676378CB72455FC42B648E0E043B /* DStorageKit-dummy.m */,
-				F2297C1400CB8CB58261F4F12CB04545 /* DStorageKit-Info.plist */,
-				862CB779D663721697EF1A0EE5F876DD /* DStorageKit-prefix.pch */,
-				1E4D1C680A2038A6CBEAD9D377F4BC2E /* DStorageKit-umbrella.h */,
+				39662F3F97213B2C0BFA591B683F99F1 /* BaseFlowDelegate.swift */,
+				1034F77C7BE5B1CCF7B49C3B88FA8232 /* CellWrapper.swift */,
+				E6E99F6EEED156A429167943C624AA32 /* CellWrapperConfig.swift */,
+				F71EE27C63D58747E4E2C6C83F244FCA /* MultiTableSection.swift */,
+				43FC2113633A0E213C89C1C6A3B577BC /* TableCellActionableProtocol.swift */,
+				B3B40CA421284F1BB355CE833D1A8B7B /* TableCellControlableProtocol.swift */,
+				69C2AE88BC553B8CA39E0417A4E4256C /* TableDataSource.swift */,
+				1506D6FDA609220B5D5922BF861F649F /* TableSection.swift */,
+				AD82B1A450C3DF35B6473CE9B89C6009 /* TableSectionActionableProtocol.swift */,
+				612E020508018AFD851D7456B87FE873 /* TableSectionConfig.swift */,
+				735AB1226F0F1C08749C9E6FDCFD6890 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DStorageKit";
+			name = DStorageKit;
+			path = DStorageKit;
 			sourceTree = "<group>";
 		};
-		A8A21B35DC7CD183F9444DC9AD908206 /* Pods */ = {
+		4E1EE25DF7F7B1E218F5C7FE0E3F6044 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B183CC402C2DE6501764884CB8DF7AA2 /* DStorageKit */,
+				1DBE967EC9297300F4B7FEAA8B18A35A /* DStorageKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B183CC402C2DE6501764884CB8DF7AA2 /* DStorageKit */ = {
+		735AB1226F0F1C08749C9E6FDCFD6890 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				570731EE9A9C84A7D58641549FF9E3EA /* BaseFlowDelegate.swift */,
-				DC4F9CB64609A32C8EB5EDF3C3FC3EE4 /* MultiTableCellWrapper.swift */,
-				2A8FDCAC84A115883F340EB858FCCE36 /* MultiTableSection.swift */,
-				2B87CDB76E1F3C6A1A159B0200793A3F /* SectionTapDelegateProtocol.swift */,
-				6BA660EDEE23282DACE7D50D886C42E9 /* TableCellActionableProtocol.swift */,
-				0FB7A4D93D2C8B01A943B0F683BF1AB9 /* TableCellControlableProtocol.swift */,
-				A5DD361B914FA8EC44EF6307C6B36493 /* TableDataSource.swift */,
-				CFE0D3612B13D7A4EA6035EDB97FE6CA /* TableSection.swift */,
-				438CE3B0A026589B01150DCD924DFAA3 /* Support Files */,
+				EE87EC2F4EE1DAAF2B0D0F59FF2D54B8 /* DStorageKit.modulemap */,
+				92DF11D90D3BEC4521092A96396A99EE /* DStorageKit.xcconfig */,
+				1A02FD1D5A71691024B848E388D760CF /* DStorageKit-dummy.m */,
+				5808D06358DA90C55B4F24E6DDA65760 /* DStorageKit-Info.plist */,
+				8897E23B8CAC864DF0B7971E6D541CFC /* DStorageKit-prefix.pch */,
+				A2F39B498F4157913F8AD6AB61859AF4 /* DStorageKit-umbrella.h */,
 			);
-			name = DStorageKit;
-			path = DStorageKit;
+			name = "Support Files";
+			path = "../Target Support Files/DStorageKit";
 			sourceTree = "<group>";
 		};
 		C4DAEF32C7989EF6445D71E53F399532 /* Targets Support Files */ = {
@@ -146,7 +152,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				A8A21B35DC7CD183F9444DC9AD908206 /* Pods */,
+				4E1EE25DF7F7B1E218F5C7FE0E3F6044 /* Pods */,
 				D901E908275ECD44C228CF1A3D8167DC /* Products */,
 				C4DAEF32C7989EF6445D71E53F399532 /* Targets Support Files */,
 			);
@@ -190,11 +196,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C03BE68C76651ECDB86E5104F5E71B80 /* Headers */ = {
+		93D6160CEE7ADBDF3535DEA66206B442 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B8AE74B0C618F0B7E7BDB67C007C57 /* DStorageKit-umbrella.h in Headers */,
+				6FE853F840312E6C28E9C2C1A277AACC /* DStorageKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,12 +236,12 @@
 		};
 		7BDBCEFE4FB223EAEBE7CD23250EC73C /* DStorageKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B83CE27DB6FA115D98E3ED066A5A1D6A /* Build configuration list for PBXNativeTarget "DStorageKit" */;
+			buildConfigurationList = 1A771A3E5B65375EC8FF464DF3870838 /* Build configuration list for PBXNativeTarget "DStorageKit" */;
 			buildPhases = (
-				C03BE68C76651ECDB86E5104F5E71B80 /* Headers */,
-				7CC32A3B21D0AB6E40E46B7A9D0B750C /* Sources */,
-				B7A418C2A0D43E2CC4836BEF2DC7D928 /* Frameworks */,
-				92F0CF441EA1AF548DE01B0BB4518757 /* Resources */,
+				93D6160CEE7ADBDF3535DEA66206B442 /* Headers */,
+				1AC86351FDE2BD828FA471B834102AF6 /* Sources */,
+				38655588DAA08F80C87C50F0F23BBBDF /* Frameworks */,
+				0028718EE738331E6A8C1E8D883EE698 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -274,7 +280,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		92F0CF441EA1AF548DE01B0BB4518757 /* Resources */ = {
+		0028718EE738331E6A8C1E8D883EE698 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,19 +297,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7CC32A3B21D0AB6E40E46B7A9D0B750C /* Sources */ = {
+		1AC86351FDE2BD828FA471B834102AF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA35C4FDDB008CEDB8D1A6FBF4FCDD89 /* BaseFlowDelegate.swift in Sources */,
-				F51151A0339BF638F4ECBBF768EB9B3E /* DStorageKit-dummy.m in Sources */,
-				F1652B8F37D925D4231FCB8527E85635 /* MultiTableCellWrapper.swift in Sources */,
-				FF9A51AF37FE0FAC405B42DA977F2817 /* MultiTableSection.swift in Sources */,
-				4987F534C6ED0317C9FFE16782764182 /* SectionTapDelegateProtocol.swift in Sources */,
-				AE8537EF5FBC303CDA52AA678BF93AEA /* TableCellActionableProtocol.swift in Sources */,
-				F25135186219DE30C5C40C52D0DCBBAC /* TableCellControlableProtocol.swift in Sources */,
-				0B187962F476A173E61D5916187B7F8E /* TableDataSource.swift in Sources */,
-				15695A12B73BB1AF0892D82965F9F48B /* TableSection.swift in Sources */,
+				A51B6384B41AD9DEB9AC37C06E3A38F7 /* BaseFlowDelegate.swift in Sources */,
+				11AFAF9F113762BC4CC9AF9FE1221224 /* CellWrapper.swift in Sources */,
+				BAC972F0B87457A94E304651A0AA9162 /* CellWrapperConfig.swift in Sources */,
+				D72B7FD001C36DBC91630085F670715B /* DStorageKit-dummy.m in Sources */,
+				DBF417B7C7970433A4D453AC23182B62 /* MultiTableSection.swift in Sources */,
+				73DE99E3042176A431EB207A56BFB3FE /* TableCellActionableProtocol.swift in Sources */,
+				BDA8AEF0914A90F9E5020ED3545C625E /* TableCellControlableProtocol.swift in Sources */,
+				0B2C9DA2E5E2BE3A5669FCE8EE3A8AC5 /* TableDataSource.swift in Sources */,
+				7523883B2AA227ED000B28749F067EBE /* TableSection.swift in Sources */,
+				9C593DA0752104ADEC598571F45E3D84 /* TableSectionActionableProtocol.swift in Sources */,
+				D195B6EB203B63A321662DD1E0FCAF2C /* TableSectionConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,77 +335,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		198E7D13BCFB9FBD5C6E33D86C6422D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B48673D9372A670575BCA5D0A2F07AF4 /* DStorageKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DStorageKit/DStorageKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DStorageKit/DStorageKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DStorageKit/DStorageKit.modulemap";
-				PRODUCT_MODULE_NAME = DStorageKit;
-				PRODUCT_NAME = DStorageKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		39A492A388AC6E4CB072E4D4210E3F79 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B48673D9372A670575BCA5D0A2F07AF4 /* DStorageKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DStorageKit/DStorageKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DStorageKit/DStorageKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DStorageKit/DStorageKit.modulemap";
-				PRODUCT_MODULE_NAME = DStorageKit;
-				PRODUCT_NAME = DStorageKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +497,42 @@
 			};
 			name = Release;
 		};
+		E6708FF168FE283675789C55E3ABB904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92DF11D90D3BEC4521092A96396A99EE /* DStorageKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DStorageKit/DStorageKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DStorageKit/DStorageKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DStorageKit/DStorageKit.modulemap";
+				PRODUCT_MODULE_NAME = DStorageKit;
+				PRODUCT_NAME = DStorageKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EC12D6654CE8DB9583A3F5E2EFFCC049 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DC005FC57289D21CBF26ABCE5B27BF6 /* Pods-DStorageKitDemo.debug.xcconfig */;
@@ -597,9 +570,53 @@
 			};
 			name = Debug;
 		};
+		FE2B0EDFEFFC3C749DA23D35F2EA855B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92DF11D90D3BEC4521092A96396A99EE /* DStorageKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DStorageKit/DStorageKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DStorageKit/DStorageKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DStorageKit/DStorageKit.modulemap";
+				PRODUCT_MODULE_NAME = DStorageKit;
+				PRODUCT_NAME = DStorageKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A771A3E5B65375EC8FF464DF3870838 /* Build configuration list for PBXNativeTarget "DStorageKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE2B0EDFEFFC3C749DA23D35F2EA855B /* Debug */,
+				E6708FF168FE283675789C55E3ABB904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -614,15 +631,6 @@
 			buildConfigurations = (
 				EC12D6654CE8DB9583A3F5E2EFFCC049 /* Debug */,
 				C6323F7BC789AE728977C9F583CD984D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B83CE27DB6FA115D98E3ED066A5A1D6A /* Build configuration list for PBXNativeTarget "DStorageKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				198E7D13BCFB9FBD5C6E33D86C6422D7 /* Debug */,
-				39A492A388AC6E4CB072E4D4210E3F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

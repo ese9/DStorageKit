@@ -12,7 +12,7 @@ import DStorageKit
 
 typealias CompletionBlock = () -> Void
 
-class UserInfoTableSection: MultiTableSection {
+final class UserInfoTableSection: MultiTableSection {
     
     fileprivate var firstName: String?
     fileprivate var lastName: String?
@@ -23,30 +23,28 @@ class UserInfoTableSection: MultiTableSection {
         return baseFlowDelegate as? AddUserInfoDelegate
     }
     
-    private var pickerViewWrapper: PickerViewTableCellWrapper?
-    private var pickerDateWrapper: PickerDateTableCellWrapper?
+    private let saveUserKey = "saveUser"
+    private let genderPickKey = "genderPick"
+    private let datePickKey = "datePick"
+    private let inputKey = "inputKey"
+    
     
     init() {
         super.init(priority: 0, minRowsCount: 0 ,maxRowsCount: Int.max)
         
-        let inputWrapper = NameInputCellWrapper(priority: 0, wrapperOwner: self)
-        let saveUser = SaveUserTableCellWrapper(priority: 3, wrapperOwner: self)
-        pickerViewWrapper = PickerViewTableCellWrapper(priority: 1, wrapperOwner: self)
-        pickerDateWrapper = PickerDateTableCellWrapper(priority: 2, wrapperOwner: self)
-
-        addWrapper(wrapper: saveUser)
-        addWrapper(wrapper: pickerViewWrapper!)
-        addWrapper(wrapper: pickerDateWrapper!)
-        addWrapper(wrapper: inputWrapper)
+        addWrapper(with: saveUserKey, wrapper: SaveUserTableCellWrapper(priority: 3, wrapperOwner: self))
+        addWrapper(with: genderPickKey, wrapper: PickerViewTableCellWrapper(priority: 1, wrapperOwner: self))
+        addWrapper(with: datePickKey, wrapper: PickerDateTableCellWrapper(priority: 2, wrapperOwner: self))
+        addWrapper(with: inputKey, wrapper: NameInputCellWrapper( priority: 0, wrapperOwner: self))
         
         originRowsCount = wrappers.count
     }
 
-    override func onCellAdded(at index: Int, cell: UITableViewCell) {
+    override func onCellAddedToSection(at index: Int, cell: UITableViewCell) {
         wrappers[index].cellAdded(at: index, cell: cell)
     }
     
-    override func onCellSelected(at index: Int, cell: UITableViewCell) {
+    override func onCellSelectedInSection(at index: Int, cell: UITableViewCell) {
         wrappers[index].cellSelected(at: index, cell: cell)
     }
     
@@ -55,31 +53,29 @@ class UserInfoTableSection: MultiTableSection {
         guard let first = firstName,
                 let last = lastName,
             let gender = gender else { return }
-        debugPrint("adad")
+        
         flowDelegate?.addNew(user: UserInfo(firstName: first, secondName: last, gender: gender, age: 1))
     }
     
     public func updateGender(type: GenderTypes) {
         self.gender = type
         
-        guard let index = pickerViewWrapper?.cellPriority,
-            let cell = cells[index] else { return }
+        guard let genderWrapper: PickerViewTableCellWrapper = self[genderPickKey] else { return }
         
-        pickerViewWrapper?.cellUpdated(cell: cell)
+        genderWrapper.cellUpdated(at: 0)
     }
     
     public func updateDate(date: Date) {
         self.date = date
         
-        guard let index = pickerDateWrapper?.cellPriority,
-            let cell = cells[index] else { return }
+        guard let dateWrapper: PickerDateTableCellWrapper = self[datePickKey] else { return }
         
-        pickerDateWrapper?.cellUpdated(cell: cell)
+        dateWrapper.cellUpdated(at: 0)
     }
 }
 
-class NameInputCellWrapper: MultiTableCellWrapper<NameInputTableViewCell, UserInfoTableSection> {
-    override func onCellAdded(at index: Int, cell: NameInputTableViewCell) {
+class NameInputCellWrapper: CellWrapper<NameInputTableViewCell, UserInfoTableSection> {
+    override func onCellAddedToSection(at index: Int, cell: NameInputTableViewCell) {
         cell.firstNameChanged = { [weak self] (text) in
             self?.wrapperOwner?.firstName = text
         }
@@ -90,38 +86,38 @@ class NameInputCellWrapper: MultiTableCellWrapper<NameInputTableViewCell, UserIn
     }
 }
 
-class PickerViewTableCellWrapper: MultiTableCellWrapper<PickerTableViewCell, UserInfoTableSection> {
-    override func onCellAdded(at index: Int, cell: PickerTableViewCell) {
+class PickerViewTableCellWrapper: CellWrapper<PickerTableViewCell, UserInfoTableSection> {
+    override func onCellAddedToSection(at index: Int, cell: PickerTableViewCell) {
          cell.showInformation(title: "Gender", description: wrapperOwner?.gender?.description)
     }
     
-    override func onCellSelected(at index: Int, cell: PickerTableViewCell) {
+    override func onCellSelectedInSection(at index: Int, cell: PickerTableViewCell) {
         wrapperOwner?.flowDelegate?.updateGender()
     }
     
-    override func onCellUpdated(cell: PickerTableViewCell) {
+    override func onCellUpdatedInSection(cell: PickerTableViewCell) {
         cell.showInformation(title: "Gender", description: wrapperOwner?.gender?.description)
     }
 }
 
-class PickerDateTableCellWrapper: MultiTableCellWrapper<PickerTableViewCell, UserInfoTableSection> {
-    final override func onCellAdded(at index: Int, cell: PickerTableViewCell) {
+class PickerDateTableCellWrapper: CellWrapper<PickerTableViewCell, UserInfoTableSection> {
+    final override func onCellAddedToSection(at index: Int, cell: PickerTableViewCell) {
         let dateString = self.wrapperOwner?.date?.format(mask: "MMM d, yyyy")
         cell.showInformation(title: "Date", description: dateString)
     }
    
-    override func onCellSelected(at index: Int, cell: PickerTableViewCell) {
+    override func onCellSelectedInSection(at index: Int, cell: PickerTableViewCell) {
         wrapperOwner?.flowDelegate?.updateDate()
     }
     
-    override func onCellUpdated(cell: PickerTableViewCell) {
+    override func onCellUpdatedInSection(cell: PickerTableViewCell) {
         let dateString = self.wrapperOwner?.date?.format(mask: "MMM d, yyyy")
         cell.showInformation(title: "Date", description: dateString)
     }
 }
 
-class SaveUserTableCellWrapper: MultiTableCellWrapper<SaveUserTableViewCell, UserInfoTableSection> {
-    override func onCellAdded(at index: Int, cell: SaveUserTableViewCell) {
+class SaveUserTableCellWrapper: CellWrapper<SaveUserTableViewCell, UserInfoTableSection> {
+    override func onCellAddedToSection(at index: Int, cell: SaveUserTableViewCell) {
         cell.completion = { [weak self] in
             self?.wrapperOwner?.createNewUserInfo()
         }

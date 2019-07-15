@@ -46,12 +46,12 @@ class ContactsTableSection: TableSection<ContactTableCell> {
 //        return nil
 //    }
     
-    override func onCellAdded(at index: Int, cell: ContactTableCell) {
+    override func onCellAddedToSection(at index: Int, cell: ContactTableCell) {
 
         cell.displayInfo(firstName: usersData[index].firstName, secondName: usersData[index].secondName)
     }
     
-    override func onCellSelected(at index: Int, cell: ContactTableCell) {
+    override func onCellSelectedInSection(at index: Int, cell: ContactTableCell) {
         flowDelegate?.showUser(info: usersData[index])
     }
 }

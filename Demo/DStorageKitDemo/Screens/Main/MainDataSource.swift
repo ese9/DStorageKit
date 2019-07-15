@@ -53,13 +53,13 @@ class MainDataSource: TableDataSource {
             indexPaths.append(indexPath)
         }
 
-        if contactsSection.isCollapsed {
+        if contactsSection.isSectionCollapsed {
             contactsSection.expandSection()
             tableView.insertRows(at: indexPaths, with: .fade)
         } else {
             indexPaths.forEach {
                 if let cell = tableView.cellForRow(at: $0) {
-                    contactsSection.removeFromSection(at: $0.row, cell: cell)
+                    contactsSection.cellRemoved(at: $0.row, cell: cell)
                 }
             }
         
@@ -76,7 +76,7 @@ class MainDataSource: TableDataSource {
         contactsSection.addNew(info: dataModel!.users.first!)
 //        tableView.reloadSections(IndexSet(integer: contactsSection!.sectionPriority), with: .automatic)  // 1
 
-        if contactsSection.isCollapsed {                                 // 2
+        if contactsSection.isSectionCollapsed {                                 // 2
             handleCollapseContactsSection(in: tableView)
         } else {
             
