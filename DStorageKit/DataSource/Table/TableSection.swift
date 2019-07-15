@@ -20,7 +20,13 @@ public protocol TableSectionConfigurableProtocol: TableSectionConfig {
     func expandSection()
 }
 
-open class TableSectionConfig {
+open class TableSectionConfig: Equatable {
+    
+    public static func == (lhs: TableSectionConfig, rhs: TableSectionConfig) -> Bool {
+        return lhs.sectionId == rhs.sectionId
+    }
+    
+    private var sectionId = UUID()
     var headerView: UIView?
     var footerView: UIView?
     open var sectionRowHeight = UITableView.automaticDimension
@@ -30,7 +36,7 @@ open class TableSectionConfig {
     
     let maxRowsForSection: Int
     let minRowsForSection: Int
-    public let sectionPriority: Int  // 0 - max priority
+    internal let sectionPriority: Int  // 0 - max priority
     
     public init(priority: Int, minRowsCount: Int = 1, maxRowsCount: Int = 1) {
         self.sectionPriority = priority
