@@ -45,6 +45,7 @@ extension CellWrapper: TableCellControlableProtocol {
     }
     public final func cellRemoved(at index: Int, cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
+        self._cell = nil
         onCellRemovedFromSection(at: index, cell: validCell)
     }
     public final func cellUpdated(at index: Int) {
