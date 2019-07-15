@@ -10,6 +10,7 @@ import UIKit
 
 open class MultiTableSection: TableSection<UITableViewCell> {
     
+    public var wrappers: [CellWrapperProtocol] { return _wrappers }
     private var _wrappers: [CellWrapperProtocol] = []
     private var _innerWrappers: [String: CellWrapperProtocol] = [:]
     
@@ -31,7 +32,13 @@ open class MultiTableSection: TableSection<UITableViewCell> {
         }
     }
     
-    public override func cellType(for row: Int = 0) -> UITableViewCell.Type {
+    public func getWrapperIndex(key wrapperKey: String) -> Int? {
+        guard let wrapper: CellWrapperConfig = _innerWrappers[wrapperKey] else { return nil }
+        let castedWrappers = _wrappers as [CellWrapperConfig]
+        return castedWrappers.firstIndex(of: wrapper)
+    }
+    
+    public final override func cellType(for row: Int = 0) -> UITableViewCell.Type {
         return _wrappers[row].cellType(for: row)
     }
 }
