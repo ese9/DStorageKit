@@ -1,6 +1,6 @@
 {
   "name": "DStorageKit",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "summary": "Library for flexible UITableView control",
   "homepage": "http://github.com/ese9/DStorageKit",
   "license": {
@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://github.com/ese9/DStorageKit.git",
-    "tag": "0.0.1"
+    "tag": "1.1.0"
   },
   "source_files": [
     "DStorageKit/DataSource",
