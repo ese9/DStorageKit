@@ -18,7 +18,6 @@ open class TableSection<T: UITableViewCell>: TableSectionConfig, TableSectionPro
     
     private var _cells: [Int:T] = [:]
     
-    public var cells: [Int:T] { return _cells }
     public weak var baseFlowDelegate: BaseFlowDelegate?
     public var originRowsCount: Int = 1 {
         didSet {
@@ -64,8 +63,8 @@ extension TableSection: TableCellControlableProtocol {
         onCellSelectedInSection(at: index, cell: validCell)
     }
     
-    public final func cellUpdated(cell: UITableViewCell) {
-        guard let validCell = cell as? T else { return }
+    public final func cellUpdated(at index: Int) {
+        guard let validCell = _cells[index] else { return }
         onCellUpdatedInSection(cell: validCell)
     }
     

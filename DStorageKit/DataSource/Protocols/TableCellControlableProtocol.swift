@@ -12,6 +12,6 @@ public protocol TableCellControlableProtocol {
     func cellType(for row: Int) -> UITableViewCell.Type
     func cellAdded(at index: Int, cell: UITableViewCell)
     func cellSelected(at index: Int, cell: UITableViewCell)
-    func cellUpdated(cell: UITableViewCell)
+    func cellUpdated(at index: Int)
     func cellRemoved(at index: Int, cell: UITableViewCell)
 }

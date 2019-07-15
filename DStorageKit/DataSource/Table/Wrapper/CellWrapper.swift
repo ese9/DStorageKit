@@ -20,6 +20,8 @@ open class CellWrapper<T: UITableViewCell, U: TableSectionConfig>: CellWrapperCo
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
     open func onCellUpdatedInSection(cell: T) {}
     
+    private var _cell: T?
+    
     public init(priority: Int, wrapperOwner: U?) {
         self.wrapperOwner = wrapperOwner
         super.init(priority: priority)
@@ -33,6 +35,7 @@ extension CellWrapper: TableCellControlableProtocol {
     
     public final func cellAdded(at index: Int, cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
+        self._cell = cell as? T
         onCellAddedToSection(at: index, cell: validCell)
     }
     
@@ -44,8 +47,8 @@ extension CellWrapper: TableCellControlableProtocol {
         guard let validCell = cell as? T else { return }
         onCellRemovedFromSection(at: index, cell: validCell)
     }
-    public final func cellUpdated(cell: UITableViewCell) {
-        guard let validCell = cell as? T else { return }
+    public final func cellUpdated(at index: Int) {
+        guard let validCell = _cell else { return }
         onCellUpdatedInSection(cell: validCell)
     }
 }
