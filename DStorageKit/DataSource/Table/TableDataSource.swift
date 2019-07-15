@@ -1,24 +1,23 @@
 //
 //  BaseDataSource.swift
-//  DSStorageKit
+//  DStorageKit
 //
 //  Created by Roman Novikov on 6/20/19.
 //  Copyright © 2019 SolbegSoft. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 open class TableDataSource: NSObject {
     
-    public subscript<T: TableSectionConfigurableProtocol>(key: String) -> T? {
+    public subscript<T: TableSectionProtocol>(key: String) -> T? {
         return _innerSections[key] as? T
     }
     
-    private var _sections: [TableSectionConfigurableProtocol] = []
-    private var _innerSections: [String: TableSectionConfigurableProtocol] = [:]
+    private var _sections: [TableSectionProtocol] = []
+    private var _innerSections: [String: TableSectionProtocol] = [:]
     
-    public func addNewSection(with keyName: String, _ section: TableSectionConfigurableProtocol) {
+    public func addNewSection(with keyName: String, _ section: TableSectionProtocol) {
         _sections.append(section)
         _sections.sort { $0.sectionPriority < $1.sectionPriority }
         _innerSections[keyName] = section
@@ -59,12 +58,12 @@ extension TableDataSource: UITableViewDataSource {
 extension TableDataSource: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let section = _sections[indexPath.section]
-        section.removeFromSection(at: indexPath.row, cell: cell)
+        section.cellRemoved(at: indexPath.row, cell: cell)
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
          let section = _sections[indexPath.section]
-         section.addToSection(at: indexPath.row, cell: cell)
+         section.cellAdded(at: indexPath.row, cell: cell)
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -92,7 +91,7 @@ extension TableDataSource: UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        _sections[indexPath.section].didSelectCellAt(index: indexPath.row, cell: cell)
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        _sections[indexPath.section].cellSelected(at: indexPath.row, cell: cell)
     }
 }

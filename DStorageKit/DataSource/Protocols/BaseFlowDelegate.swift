@@ -1,6 +1,6 @@
 //
 //  BaseTableFlowDelegate.swift
-//  DSStorageKit
+//  DStorageKit
 //
 //  Created by Roman Novikov on 6/20/19.
 //  Copyright © 2019 SolbegSoft. All rights reserved.

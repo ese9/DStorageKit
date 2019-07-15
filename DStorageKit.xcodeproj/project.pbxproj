@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		592AAB7222D89F8A007D0C34 /* DStorageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592AAB7022D89F8A007D0C34 /* DStorageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592AAB8422D89F9B007D0C34 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB7A22D89F9B007D0C34 /* TableDataSource.swift */; };
-		592AAB8522D89F9B007D0C34 /* MultiTableCellWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB7B22D89F9B007D0C34 /* MultiTableCellWrapper.swift */; };
+		592AAB8522D89F9B007D0C34 /* CellWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB7B22D89F9B007D0C34 /* CellWrapper.swift */; };
 		592AAB8622D89F9B007D0C34 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB7C22D89F9B007D0C34 /* TableSection.swift */; };
 		592AAB8822D89F9B007D0C34 /* MultiTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB7E22D89F9B007D0C34 /* MultiTableSection.swift */; };
 		592AAB8922D89F9B007D0C34 /* BaseFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8022D89F9B007D0C34 /* BaseFlowDelegate.swift */; };
 		592AAB8A22D89F9B007D0C34 /* TableCellActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8122D89F9B007D0C34 /* TableCellActionableProtocol.swift */; };
-		592AAB8B22D89F9B007D0C34 /* SectionTapDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8222D89F9B007D0C34 /* SectionTapDelegateProtocol.swift */; };
 		592AAB8C22D89F9B007D0C34 /* TableCellControlableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8322D89F9B007D0C34 /* TableCellControlableProtocol.swift */; };
+		59D6336722DC9E97000A6639 /* TableSectionActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336622DC9E97000A6639 /* TableSectionActionableProtocol.swift */; };
+		59D6336A22DC9EE2000A6639 /* TableSectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336922DC9EE2000A6639 /* TableSectionConfig.swift */; };
+		59D6336D22DCB3A0000A6639 /* CellWrapperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336C22DCB3A0000A6639 /* CellWrapperConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +25,15 @@
 		592AAB7022D89F8A007D0C34 /* DStorageKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStorageKit.h; sourceTree = "<group>"; };
 		592AAB7122D89F8A007D0C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		592AAB7A22D89F9B007D0C34 /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
-		592AAB7B22D89F9B007D0C34 /* MultiTableCellWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTableCellWrapper.swift; sourceTree = "<group>"; };
+		592AAB7B22D89F9B007D0C34 /* CellWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellWrapper.swift; sourceTree = "<group>"; };
 		592AAB7C22D89F9B007D0C34 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		592AAB7E22D89F9B007D0C34 /* MultiTableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTableSection.swift; sourceTree = "<group>"; };
 		592AAB8022D89F9B007D0C34 /* BaseFlowDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFlowDelegate.swift; sourceTree = "<group>"; };
 		592AAB8122D89F9B007D0C34 /* TableCellActionableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellActionableProtocol.swift; sourceTree = "<group>"; };
-		592AAB8222D89F9B007D0C34 /* SectionTapDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTapDelegateProtocol.swift; sourceTree = "<group>"; };
 		592AAB8322D89F9B007D0C34 /* TableCellControlableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellControlableProtocol.swift; sourceTree = "<group>"; };
+		59D6336622DC9E97000A6639 /* TableSectionActionableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionActionableProtocol.swift; sourceTree = "<group>"; };
+		59D6336922DC9EE2000A6639 /* TableSectionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionConfig.swift; sourceTree = "<group>"; };
+		59D6336C22DCB3A0000A6639 /* CellWrapperConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWrapperConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,9 @@
 		592AAB7922D89F9B007D0C34 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				59D6336B22DC9F20000A6639 /* Wrapper */,
+				59D6336822DC9ED7000A6639 /* Section */,
 				592AAB7A22D89F9B007D0C34 /* TableDataSource.swift */,
-				592AAB7B22D89F9B007D0C34 /* MultiTableCellWrapper.swift */,
-				592AAB7C22D89F9B007D0C34 /* TableSection.swift */,
-				592AAB7E22D89F9B007D0C34 /* MultiTableSection.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -92,12 +95,39 @@
 		592AAB7F22D89F9B007D0C34 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				59D6336522DC9E7C000A6639 /* Section */,
 				592AAB8022D89F9B007D0C34 /* BaseFlowDelegate.swift */,
 				592AAB8122D89F9B007D0C34 /* TableCellActionableProtocol.swift */,
-				592AAB8222D89F9B007D0C34 /* SectionTapDelegateProtocol.swift */,
 				592AAB8322D89F9B007D0C34 /* TableCellControlableProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		59D6336522DC9E7C000A6639 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				59D6336622DC9E97000A6639 /* TableSectionActionableProtocol.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		59D6336822DC9ED7000A6639 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				592AAB7C22D89F9B007D0C34 /* TableSection.swift */,
+				592AAB7E22D89F9B007D0C34 /* MultiTableSection.swift */,
+				59D6336922DC9EE2000A6639 /* TableSectionConfig.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		59D6336B22DC9F20000A6639 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				592AAB7B22D89F9B007D0C34 /* CellWrapper.swift */,
+				59D6336C22DCB3A0000A6639 /* CellWrapperConfig.swift */,
+			);
+			path = Wrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,14 +208,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D6336A22DC9EE2000A6639 /* TableSectionConfig.swift in Sources */,
 				592AAB8A22D89F9B007D0C34 /* TableCellActionableProtocol.swift in Sources */,
-				592AAB8522D89F9B007D0C34 /* MultiTableCellWrapper.swift in Sources */,
+				592AAB8522D89F9B007D0C34 /* CellWrapper.swift in Sources */,
 				592AAB8422D89F9B007D0C34 /* TableDataSource.swift in Sources */,
-				592AAB8B22D89F9B007D0C34 /* SectionTapDelegateProtocol.swift in Sources */,
+				59D6336722DC9E97000A6639 /* TableSectionActionableProtocol.swift in Sources */,
 				592AAB8C22D89F9B007D0C34 /* TableCellControlableProtocol.swift in Sources */,
 				592AAB8822D89F9B007D0C34 /* MultiTableSection.swift in Sources */,
 				592AAB8622D89F9B007D0C34 /* TableSection.swift in Sources */,
 				592AAB8922D89F9B007D0C34 /* BaseFlowDelegate.swift in Sources */,
+				59D6336D22DCB3A0000A6639 /* CellWrapperConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

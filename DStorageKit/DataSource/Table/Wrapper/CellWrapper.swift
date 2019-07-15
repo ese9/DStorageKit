@@ -1,0 +1,51 @@
+//
+//  MultiTableCell.swift
+//  DStorageKit
+//
+//  Created by Roman Novikov on 6/28/19.
+//  Copyright © 2019 SolbegSoft. All rights reserved.
+//
+
+import UIKit
+
+public protocol CellWrapperProtocol: CellWrapperConfig,
+                                        TableCellControlableProtocol {}
+
+open class CellWrapper<T: UITableViewCell, U: TableSectionConfig>: CellWrapperConfig, CellWrapperProtocol, TableCellActionableProtocol {
+    public weak var wrapperOwner: U?
+    
+    // Abstract functions
+    open func onCellAddedToSection(at index: Int, cell: T) {}
+    open func onCellSelectedInSection(at index: Int, cell: T) {}
+    open func onCellRemovedFromSection(at index: Int, cell: T) {}
+    open func onCellUpdatedInSection(cell: T) {}
+    
+    public init(priority: Int, wrapperOwner: U?) {
+        self.wrapperOwner = wrapperOwner
+        super.init(priority: priority)
+    }
+}
+
+extension CellWrapper: TableCellControlableProtocol {
+    public final func cellType(for row: Int) -> UITableViewCell.Type {
+        return T.self
+    }
+    
+    public final func cellAdded(at index: Int, cell: UITableViewCell) {
+        guard let validCell = cell as? T else { return }
+        onCellAddedToSection(at: index, cell: validCell)
+    }
+    
+    public final func cellSelected(at index: Int, cell: UITableViewCell) {
+        guard let validCell = cell as? T else { return }
+        onCellSelectedInSection(at: index, cell: validCell)
+    }
+    public final func cellRemoved(at index: Int, cell: UITableViewCell) {
+        guard let validCell = cell as? T else { return }
+        onCellRemovedFromSection(at: index, cell: validCell)
+    }
+    public final func cellUpdated(cell: UITableViewCell) {
+        guard let validCell = cell as? T else { return }
+        onCellUpdatedInSection(cell: validCell)
+    }
+}
