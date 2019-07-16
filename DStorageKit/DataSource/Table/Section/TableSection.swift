@@ -46,7 +46,7 @@ open class TableSection<T: UITableViewCell>: TableSectionConfig, TableSectionPro
     open func onCellAddedToSection(at index: Int, cell: T) {}
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
     open func onCellSelectedInSection(at index: Int, cell: T) {}
-    open func onCellUpdatedInSection(cell: T) {}
+    open func onCellUpdatedInSection(at index: Int, cell: T) {}
     open func configureHeader() -> UIView? { return nil }
     open func configureFooter() -> UIView? { return nil }
 }
@@ -65,7 +65,7 @@ extension TableSection: TableCellControlableProtocol {
     
     public final func cellUpdated(at index: Int) {
         guard let validCell = _cells[index] else { return }
-        onCellUpdatedInSection(cell: validCell)
+        onCellUpdatedInSection(at: index, cell: validCell)
     }
     
     public final func cellRemoved(at index: Int, cell: UITableViewCell) {

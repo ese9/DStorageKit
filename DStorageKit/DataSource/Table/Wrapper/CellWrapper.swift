@@ -12,13 +12,15 @@ public protocol CellWrapperProtocol: CellWrapperConfig,
                                         TableCellControlableProtocol {}
 
 open class CellWrapper<T: UITableViewCell, U: TableSectionConfig>: CellWrapperConfig, CellWrapperProtocol, TableCellActionableProtocol {
+    
+    
     public weak var wrapperOwner: U?
     
     // Abstract functions
     open func onCellAddedToSection(at index: Int, cell: T) {}
     open func onCellSelectedInSection(at index: Int, cell: T) {}
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
-    open func onCellUpdatedInSection(cell: T) {}
+    open func onCellUpdatedInSection(at index: Int, cell: T) {}
     
     private var _cell: T?
     
@@ -50,6 +52,6 @@ extension CellWrapper: TableCellControlableProtocol {
     }
     public final func cellUpdated(at index: Int) {
         guard let validCell = _cell else { return }
-        onCellUpdatedInSection(cell: validCell)
+        onCellUpdatedInSection(at: index, cell: validCell)
     }
 }

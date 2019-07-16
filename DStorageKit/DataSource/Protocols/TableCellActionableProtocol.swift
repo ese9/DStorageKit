@@ -13,5 +13,5 @@ public protocol TableCellActionableProtocol: class {
     func onCellAddedToSection(at index: Int, cell: T)
     func onCellSelectedInSection(at index: Int, cell: T)
     func onCellRemovedFromSection(at index: Int, cell: T)
-    func onCellUpdatedInSection(cell: T)
+    func onCellUpdatedInSection(at index: Int, cell: T)
 }
