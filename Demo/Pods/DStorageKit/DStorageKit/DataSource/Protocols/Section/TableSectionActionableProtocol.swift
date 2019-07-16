@@ -8,6 +8,7 @@
 
 
 public protocol TableSectionActionableProtocol {
+    var originRowsCount: Int { get set }
     var isSectionCollapsed: Bool { get }
     
     func collapseSection()
