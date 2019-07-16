@@ -5,6 +5,8 @@ A simple implementation of UITableViewDelegate + UITableViewDataSource that allo
 We have a complex UITableView with many different sections and cells that can be changed in the display order, disabled or added to our tableView. 
 Main target of this framework is to separate logic elements, remove all switch-case statements and create our code more readable and flexible.
 
+<img src="https://github.com/ese9/DStorageKit/blob/master/Images/Section_Screen.png" width="300" height="650" />
+
 ## How it works
 ### Custom DataSource
 1) Create new swift class
