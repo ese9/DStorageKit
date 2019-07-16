@@ -34,7 +34,7 @@ Main target of this framework is to separate logic elements, remove all switch-c
     open func onCellAddedToSection(at index: Int, cell: T) {}
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
     open func onCellSelectedInSection(at index: Int, cell: T) {}
-    open func onCellUpdatedInSection(at index: Int, cell: T) {}
+    open func onCellUpdatedInSection(cell: T) {}
     open func configureHeader() -> UIView? { return nil }
     open func configureFooter() -> UIView? { return nil }
 ```
@@ -58,5 +58,5 @@ Main target of this framework is to separate logic elements, remove all switch-c
     open func onCellAddedToSection(at index: Int, cell: T) {}
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
     open func onCellSelectedInSection(at index: Int, cell: T) {}
-    open func onCellUpdatedInSection(at index: Int, cell: T) {}
+    open func onCellUpdatedInSection(cell: T) {}
 ```

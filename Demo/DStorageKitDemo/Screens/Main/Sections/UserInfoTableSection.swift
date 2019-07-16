@@ -32,22 +32,12 @@ final class UserInfoTableSection: MultiTableSection {
     
     
     init() {
-        super.init(priority: 0, minRowsCount: 0 ,maxRowsCount: Int.max)
+        super.init(priority: 0, minRowsCount: 0, maxRowsCount: Int.max)
         
         addWrapper(with: saveUserKey, wrapper: SaveUserTableCellWrapper(priority: 3, wrapperOwner: self))
         addWrapper(with: genderPickKey, wrapper: PickerViewTableCellWrapper(priority: 1, wrapperOwner: self))
         addWrapper(with: datePickKey, wrapper: PickerDateTableCellWrapper(priority: 2, wrapperOwner: self))
         addWrapper(with: inputKey, wrapper: NameInputCellWrapper( priority: 0, wrapperOwner: self))
-        
-        originRowsCount = wrappers.count
-    }
-
-    override func onCellAddedToSection(at index: Int, cell: UITableViewCell) {
-        wrappers[index].cellAdded(at: index, cell: cell)
-    }
-    
-    override func onCellSelectedInSection(at index: Int, cell: UITableViewCell) {
-        wrappers[index].cellSelected(at: index, cell: cell)
     }
     
     public func createNewUserInfo(){
@@ -97,7 +87,7 @@ class PickerViewTableCellWrapper: CellWrapper<PickerTableViewCell, UserInfoTable
         wrapperOwner?.flowDelegate?.updateGender()
     }
     
-    override func onCellUpdatedInSection(cell: PickerTableViewCell) {
+    override func onCellUpdatedInSection(at index: Int, cell: PickerTableViewCell) {
         cell.showInformation(title: "Gender", description: wrapperOwner?.gender?.description)
     }
 }
@@ -112,7 +102,7 @@ class PickerDateTableCellWrapper: CellWrapper<PickerTableViewCell, UserInfoTable
         wrapperOwner?.flowDelegate?.updateDate()
     }
     
-    override func onCellUpdatedInSection(cell: PickerTableViewCell) {
+    override func onCellUpdatedInSection(at index: Int, cell: PickerTableViewCell) {
         let dateString = self.wrapperOwner?.date?.format(mask: "MMM d, yyyy")
         cell.showInformation(title: "Date", description: dateString)
     }

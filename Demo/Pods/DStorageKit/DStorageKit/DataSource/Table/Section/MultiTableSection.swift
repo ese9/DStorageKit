@@ -10,7 +10,6 @@ import UIKit
 
 open class MultiTableSection: TableSection<UITableViewCell> {
     
-    public var wrappers: [CellWrapperProtocol] { return _wrappers }
     private var _wrappers: [CellWrapperProtocol] = []
     private var _innerWrappers: [String: CellWrapperProtocol] = [:]
     
@@ -22,6 +21,7 @@ open class MultiTableSection: TableSection<UITableViewCell> {
         _wrappers.append(wrapper)
         _wrappers.sort { $0.cellPriority < $1.cellPriority }
         _innerWrappers[keyName] = wrapper
+        originRowsCount = _wrappers.count
     }
     
     public func removeWrapper(with key: String) {
@@ -40,5 +40,21 @@ open class MultiTableSection: TableSection<UITableViewCell> {
     
     public final override func cellType(for row: Int = 0) -> UITableViewCell.Type {
         return _wrappers[row].cellType(for: row)
+    }
+    
+    final public override func onCellAddedToSection(at index: Int, cell: UITableViewCell) {
+        _wrappers[index].cellAdded(at: index, cell: cell)
+    }
+    
+    final public override func onCellSelectedInSection(at index: Int, cell: UITableViewCell) {
+        _wrappers[index].cellSelected(at: index, cell: cell)
+    }
+    
+    final public override func onCellUpdatedInSection(at index: Int, cell: UITableViewCell) {
+        _wrappers[index].cellUpdated(at: index)
+    }
+    
+    final public override func onCellRemovedFromSection(at index: Int, cell: UITableViewCell) {
+        _wrappers[index].cellRemoved(at: index, cell: cell)
     }
 }
