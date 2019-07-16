@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
+#if canImport(DStorageKit)
 import DStorageKit
+#endif
 
 class MainDataSource: TableDataSource {
     
@@ -41,32 +43,7 @@ class MainDataSource: TableDataSource {
     }
     
     func handleCollapseContactsSection(in tableView: UITableView) {
-    
-        guard let contactsSection: ContactsTableSection = self[contactSectionKey],
-            let contactsIndex = getSectionIndex(key: contactSectionKey),
-            let validModel = dataModel else { return }
-        
-        var indexPaths: [IndexPath] = []
-        
-        for row in validModel.users.indices {
-            let indexPath = IndexPath(row: row, section: contactsIndex)
-            indexPaths.append(indexPath)
-        }
-
-        if contactsSection.isSectionCollapsed {
-            contactsSection.expandSection()
-            tableView.insertRows(at: indexPaths, with: .fade)
-        } else {
-            indexPaths.forEach {
-                if let cell = tableView.cellForRow(at: $0) {
-                    contactsSection.cellRemoved(at: $0.row, cell: cell)
-                }
-            }
-        
-           contactsSection.collapseSection()
-            
-            tableView.deleteRows(at: indexPaths, with: .none)
-        }
+        handleSectionCollapsing(in: tableView, with: contactSectionKey)
     }
     
     func addNewUser(in tableView: UITableView) {

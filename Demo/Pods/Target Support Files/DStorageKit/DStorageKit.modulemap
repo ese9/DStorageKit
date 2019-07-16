@@ -1,6 +1,0 @@
-framework module DStorageKit {
-  umbrella header "DStorageKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

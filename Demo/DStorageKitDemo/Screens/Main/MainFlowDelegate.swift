@@ -7,7 +7,9 @@
 //
 
 import Foundation
+#if canImport(DStorageKit)
 import DStorageKit
+#endif
 
 protocol MainFlowDelegate: ShowUserInfoDelegate,
                             AddUserInfoDelegate {}

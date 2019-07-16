@@ -36,6 +36,32 @@ open class TableDataSource: NSObject {
         let castedSections = _sections as [TableSectionConfig]
         return castedSections.firstIndex(of: section)
     }
+    
+    public func handleSectionCollapsing(in tableView: UITableView, with key: String) {
+        guard let section = _innerSections[key],
+            let index = getSectionIndex(key: key) else { return }
+        
+        var indexPaths: [IndexPath] = []
+    
+        for row in 0..<section.originRowsCount {
+            let indexPath = IndexPath(row: row, section: index)
+            indexPaths.append(indexPath)
+        }
+        
+        if section.isSectionCollapsed {
+            section.expandSection()
+            tableView.insertRows(at: indexPaths, with: .fade)
+        } else {
+            indexPaths.forEach {
+                if let cell = tableView.cellForRow(at: $0) {
+                    section.cellRemoved(at: $0.row, cell: cell)
+                }
+            }
+            
+            section.collapseSection()
+            tableView.deleteRows(at: indexPaths, with: .none)
+        }
+    }
 }
 
 extension TableDataSource: UITableViewDataSource {

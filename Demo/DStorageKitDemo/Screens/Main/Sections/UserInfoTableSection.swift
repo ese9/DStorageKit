@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
+#if canImport(DStorageKit)
 import DStorageKit
+#endif
 
 typealias CompletionBlock = () -> Void
 

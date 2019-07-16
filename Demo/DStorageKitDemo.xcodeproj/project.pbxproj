@@ -11,6 +11,16 @@
 		5912284022D8D41700DA9C66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5912283F22D8D41700DA9C66 /* AppDelegate.swift */; };
 		5912284722D8D41800DA9C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5912284622D8D41800DA9C66 /* Assets.xcassets */; };
 		5912284A22D8D41800DA9C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5912284822D8D41800DA9C66 /* LaunchScreen.storyboard */; };
+		5934ED5422DDC7D10090C284 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4622DDC7D10090C284 /* TableDataSource.swift */; };
+		5934ED5522DDC7D10090C284 /* TableSectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4822DDC7D10090C284 /* TableSectionConfig.swift */; };
+		5934ED5622DDC7D10090C284 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4922DDC7D10090C284 /* TableSection.swift */; };
+		5934ED5722DDC7D10090C284 /* MultiTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4A22DDC7D10090C284 /* MultiTableSection.swift */; };
+		5934ED5822DDC7D10090C284 /* CellWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4C22DDC7D10090C284 /* CellWrapper.swift */; };
+		5934ED5922DDC7D10090C284 /* CellWrapperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4D22DDC7D10090C284 /* CellWrapperConfig.swift */; };
+		5934ED5A22DDC7D10090C284 /* BaseFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED4F22DDC7D10090C284 /* BaseFlowDelegate.swift */; };
+		5934ED5B22DDC7D10090C284 /* TableSectionActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED5122DDC7D10090C284 /* TableSectionActionableProtocol.swift */; };
+		5934ED5C22DDC7D10090C284 /* TableCellActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED5222DDC7D10090C284 /* TableCellActionableProtocol.swift */; };
+		5934ED5D22DDC7D10090C284 /* TableCellControlableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934ED5322DDC7D10090C284 /* TableCellControlableProtocol.swift */; };
 		59CB09F822D8D48E004C5857 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB09DD22D8D48D004C5857 /* UserViewController.swift */; };
 		59CB09F922D8D48E004C5857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59CB09DE22D8D48D004C5857 /* Main.storyboard */; };
 		59CB09FA22D8D48E004C5857 /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB09E222D8D48D004C5857 /* PickerTableViewCell.swift */; };
@@ -32,12 +42,34 @@
 		59D6336222DC96C5000A6639 /* SectionTapDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336122DC96C5000A6639 /* SectionTapDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		5934ED2722DDB6D50090C284 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		5912283C22D8D41700DA9C66 /* DStorageKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStorageKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5912283F22D8D41700DA9C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5912284622D8D41800DA9C66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5912284922D8D41800DA9C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5912284B22D8D41800DA9C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5934ED4622DDC7D10090C284 /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		5934ED4822DDC7D10090C284 /* TableSectionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionConfig.swift; sourceTree = "<group>"; };
+		5934ED4922DDC7D10090C284 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		5934ED4A22DDC7D10090C284 /* MultiTableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTableSection.swift; sourceTree = "<group>"; };
+		5934ED4C22DDC7D10090C284 /* CellWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellWrapper.swift; sourceTree = "<group>"; };
+		5934ED4D22DDC7D10090C284 /* CellWrapperConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellWrapperConfig.swift; sourceTree = "<group>"; };
+		5934ED4F22DDC7D10090C284 /* BaseFlowDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFlowDelegate.swift; sourceTree = "<group>"; };
+		5934ED5122DDC7D10090C284 /* TableSectionActionableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionActionableProtocol.swift; sourceTree = "<group>"; };
+		5934ED5222DDC7D10090C284 /* TableCellActionableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellActionableProtocol.swift; sourceTree = "<group>"; };
+		5934ED5322DDC7D10090C284 /* TableCellControlableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellControlableProtocol.swift; sourceTree = "<group>"; };
 		59CB09DD22D8D48D004C5857 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		59CB09DF22D8D48D004C5857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59CB09E222D8D48D004C5857 /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +127,7 @@
 		5912283E22D8D41700DA9C66 /* DStorageKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5934ED4422DDC7D10090C284 /* DataSource */,
 				59CB09F522D8D48E004C5857 /* Misc */,
 				59CB09F322D8D48E004C5857 /* Model */,
 				59CB09DB22D8D48D004C5857 /* Screens */,
@@ -103,6 +136,64 @@
 				5912284B22D8D41800DA9C66 /* Info.plist */,
 			);
 			path = DStorageKitDemo;
+			sourceTree = "<group>";
+		};
+		5934ED4422DDC7D10090C284 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5934ED4522DDC7D10090C284 /* Table */,
+				5934ED4E22DDC7D10090C284 /* Protocols */,
+			);
+			name = DataSource;
+			path = ../../DStorageKit/DataSource;
+			sourceTree = "<group>";
+		};
+		5934ED4522DDC7D10090C284 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				5934ED4622DDC7D10090C284 /* TableDataSource.swift */,
+				5934ED4722DDC7D10090C284 /* Section */,
+				5934ED4B22DDC7D10090C284 /* Wrapper */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		5934ED4722DDC7D10090C284 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				5934ED4822DDC7D10090C284 /* TableSectionConfig.swift */,
+				5934ED4922DDC7D10090C284 /* TableSection.swift */,
+				5934ED4A22DDC7D10090C284 /* MultiTableSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		5934ED4B22DDC7D10090C284 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				5934ED4C22DDC7D10090C284 /* CellWrapper.swift */,
+				5934ED4D22DDC7D10090C284 /* CellWrapperConfig.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		5934ED4E22DDC7D10090C284 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5934ED4F22DDC7D10090C284 /* BaseFlowDelegate.swift */,
+				5934ED5022DDC7D10090C284 /* Section */,
+				5934ED5222DDC7D10090C284 /* TableCellActionableProtocol.swift */,
+				5934ED5322DDC7D10090C284 /* TableCellControlableProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5934ED5022DDC7D10090C284 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				5934ED5122DDC7D10090C284 /* TableSectionActionableProtocol.swift */,
+			);
+			path = Section;
 			sourceTree = "<group>";
 		};
 		59CB09DA22D8D45D004C5857 /* Supporting Files */ = {
@@ -238,9 +329,9 @@
 				5912283822D8D41700DA9C66 /* Sources */,
 				5912283922D8D41700DA9C66 /* Frameworks */,
 				5912283A22D8D41700DA9C66 /* Resources */,
-				C22BC526E2C76CA2C72603F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
+				5934ED2722DDB6D50090C284 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -320,23 +411,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C22BC526E2C76CA2C72603F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DStorageKitDemo/Pods-DStorageKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DStorageKitDemo/Pods-DStorageKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DStorageKitDemo/Pods-DStorageKitDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,23 +418,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5934ED5922DDC7D10090C284 /* CellWrapperConfig.swift in Sources */,
 				59CB0A0222D8D48E004C5857 /* MainFlowDelegate.swift in Sources */,
 				59CB0A0822D8D48E004C5857 /* Date.swift in Sources */,
 				5912284022D8D41700DA9C66 /* AppDelegate.swift in Sources */,
 				59CB0A0922D8D48E004C5857 /* XibLoadable.swift in Sources */,
+				5934ED5D22DDC7D10090C284 /* TableCellControlableProtocol.swift in Sources */,
 				59CB09FF22D8D48E004C5857 /* ContactsTableSection.swift in Sources */,
 				59CB09FA22D8D48E004C5857 /* PickerTableViewCell.swift in Sources */,
+				5934ED5622DDC7D10090C284 /* TableSection.swift in Sources */,
+				5934ED5722DDC7D10090C284 /* MultiTableSection.swift in Sources */,
 				59CB09FE22D8D48E004C5857 /* UserInfoTableSection.swift in Sources */,
+				5934ED5522DDC7D10090C284 /* TableSectionConfig.swift in Sources */,
+				5934ED5422DDC7D10090C284 /* TableDataSource.swift in Sources */,
 				59CB09FC22D8D48E004C5857 /* AgeInputTableViewCell.swift in Sources */,
 				59CB09F822D8D48E004C5857 /* UserViewController.swift in Sources */,
+				5934ED5822DDC7D10090C284 /* CellWrapper.swift in Sources */,
 				59CB0A0322D8D48E004C5857 /* SaveUserTableViewCell.swift in Sources */,
 				59CB0A0022D8D48E004C5857 /* MainViewController.swift in Sources */,
 				59CB0A0622D8D48E004C5857 /* HeaderLabelView.swift in Sources */,
+				5934ED5C22DDC7D10090C284 /* TableCellActionableProtocol.swift in Sources */,
+				5934ED5B22DDC7D10090C284 /* TableSectionActionableProtocol.swift in Sources */,
 				59CB09FB22D8D48E004C5857 /* NameInputTableViewCell.swift in Sources */,
 				59CB09FD22D8D48E004C5857 /* ContactTableCell.swift in Sources */,
 				59CB0A0722D8D48E004C5857 /* ApplicationModel.swift in Sources */,
 				59D6336222DC96C5000A6639 /* SectionTapDelegateProtocol.swift in Sources */,
 				59CB0A0122D8D48E004C5857 /* MainDataSource.swift in Sources */,
+				5934ED5A22DDC7D10090C284 /* BaseFlowDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
