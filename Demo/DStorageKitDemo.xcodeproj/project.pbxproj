@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,7 +39,7 @@
 		59CB0A0722D8D48E004C5857 /* ApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB09F422D8D48E004C5857 /* ApplicationModel.swift */; };
 		59CB0A0822D8D48E004C5857 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB09F622D8D48E004C5857 /* Date.swift */; };
 		59CB0A0922D8D48E004C5857 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB09F722D8D48E004C5857 /* XibLoadable.swift */; };
-		59D6336222DC96C5000A6639 /* SectionTapDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336122DC96C5000A6639 /* SectionTapDelegateProtocol.swift */; };
+		59CB296922DDCA51002CA119 /* SectionTapDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CB296822DDCA51002CA119 /* SectionTapDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -88,7 +88,7 @@
 		59CB09F422D8D48E004C5857 /* ApplicationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
 		59CB09F622D8D48E004C5857 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		59CB09F722D8D48E004C5857 /* XibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
-		59D6336122DC96C5000A6639 /* SectionTapDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionTapDelegateProtocol.swift; path = "/Users/ese9/Documents/XCode-Projects/DStorageKit/Demo/DStorageKitDemo/Misc/SectionTapDelegateProtocol.swift"; sourceTree = "<absolute>"; };
+		59CB296822DDCA51002CA119 /* SectionTapDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTapDelegateProtocol.swift; sourceTree = "<group>"; };
 		A8052BB5C4247F38F440BD28 /* Pods_DStorageKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStorageKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C52A9C59AD3435A9E0E3B /* Pods-DStorageKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStorageKitDemo.release.xcconfig"; path = "Target Support Files/Pods-DStorageKitDemo/Pods-DStorageKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F3F126410C7D844C91ECBB34 /* Pods-DStorageKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStorageKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-DStorageKitDemo/Pods-DStorageKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 		59CB09F522D8D48E004C5857 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				59D6336122DC96C5000A6639 /* SectionTapDelegateProtocol.swift */,
+				59CB296822DDCA51002CA119 /* SectionTapDelegateProtocol.swift */,
 				59CB09F622D8D48E004C5857 /* Date.swift */,
 				59CB09F722D8D48E004C5857 /* XibLoadable.swift */,
 			);
@@ -442,7 +442,7 @@
 				59CB09FB22D8D48E004C5857 /* NameInputTableViewCell.swift in Sources */,
 				59CB09FD22D8D48E004C5857 /* ContactTableCell.swift in Sources */,
 				59CB0A0722D8D48E004C5857 /* ApplicationModel.swift in Sources */,
-				59D6336222DC96C5000A6639 /* SectionTapDelegateProtocol.swift in Sources */,
+				59CB296922DDCA51002CA119 /* SectionTapDelegateProtocol.swift in Sources */,
 				59CB0A0122D8D48E004C5857 /* MainDataSource.swift in Sources */,
 				5934ED5A22DDC7D10090C284 /* BaseFlowDelegate.swift in Sources */,
 			);
