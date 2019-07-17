@@ -1,5 +1,5 @@
 # DStorageKit
-A simple implementation of UITableViewDelegate + UITableViewDataSource that allows you to manage the content of a complex table with multiple sections and cells and customize the interface.
+A simple implementation of UITableViewDelegate + UITableViewDataSource that allows you to manage the content of a complex table with multiple sections and cells.
 
 # Quick look through
 We have a complex UITableView with many different sections and cells that can be changed in the display order, disabled or added to our tableView. 
@@ -57,7 +57,9 @@ Make sure your cell class has the same name with table cell identifier
 ### Custom Section with more than 1 cell
 1) Create new swift class
 2) Inherit it from MultiTableSection
-..) 3-5 Do the same steps as in single-cell section implementation
+3) Do the same step as in single-cell section implementation
+4) Do the same step as in single-cell section implementation
+5) Do the same step as in single-cell section implementation
 6) Create new class and inherit it from CellWrapper<T, U> for each cell you want to be displayed
 > NOTE: T - your cell class type. U - section class type (owner for created wrapper). Wrapper has weak reference to its owner ```wrapperOwner```. Wrapper has their own display priority
 
