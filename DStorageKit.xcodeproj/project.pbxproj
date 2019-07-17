@@ -15,10 +15,22 @@
 		592AAB8922D89F9B007D0C34 /* BaseFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8022D89F9B007D0C34 /* BaseFlowDelegate.swift */; };
 		592AAB8A22D89F9B007D0C34 /* TableCellActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8122D89F9B007D0C34 /* TableCellActionableProtocol.swift */; };
 		592AAB8C22D89F9B007D0C34 /* TableCellControlableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592AAB8322D89F9B007D0C34 /* TableCellControlableProtocol.swift */; };
+		59BB81F622DF1EF8006AA076 /* DStorageKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BB81F522DF1EF8006AA076 /* DStorageKitTests.swift */; };
+		59BB81F822DF1EF8006AA076 /* DStorageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592AAB6D22D89F8A007D0C34 /* DStorageKit.framework */; };
 		59D6336722DC9E97000A6639 /* TableSectionActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336622DC9E97000A6639 /* TableSectionActionableProtocol.swift */; };
 		59D6336A22DC9EE2000A6639 /* TableSectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336922DC9EE2000A6639 /* TableSectionConfig.swift */; };
 		59D6336D22DCB3A0000A6639 /* CellWrapperConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D6336C22DCB3A0000A6639 /* CellWrapperConfig.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59BB81F922DF1EF8006AA076 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592AAB6422D89F8A007D0C34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592AAB6C22D89F8A007D0C34;
+			remoteInfo = DStorageKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		592AAB6D22D89F8A007D0C34 /* DStorageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DStorageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +43,9 @@
 		592AAB8022D89F9B007D0C34 /* BaseFlowDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFlowDelegate.swift; sourceTree = "<group>"; };
 		592AAB8122D89F9B007D0C34 /* TableCellActionableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellActionableProtocol.swift; sourceTree = "<group>"; };
 		592AAB8322D89F9B007D0C34 /* TableCellControlableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellControlableProtocol.swift; sourceTree = "<group>"; };
+		59BB81F322DF1EF8006AA076 /* DStorageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStorageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59BB81F522DF1EF8006AA076 /* DStorageKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DStorageKitTests.swift; sourceTree = "<group>"; };
+		59BB81F722DF1EF8006AA076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59D6336622DC9E97000A6639 /* TableSectionActionableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionActionableProtocol.swift; sourceTree = "<group>"; };
 		59D6336922DC9EE2000A6639 /* TableSectionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionConfig.swift; sourceTree = "<group>"; };
 		59D6336C22DCB3A0000A6639 /* CellWrapperConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWrapperConfig.swift; sourceTree = "<group>"; };
@@ -44,6 +59,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59BB81F022DF1EF8006AA076 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59BB81F822DF1EF8006AA076 /* DStorageKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				592AAB6F22D89F8A007D0C34 /* DStorageKit */,
+				59BB81F422DF1EF8006AA076 /* DStorageKitTests */,
 				592AAB6E22D89F8A007D0C34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				592AAB6D22D89F8A007D0C34 /* DStorageKit.framework */,
+				59BB81F322DF1EF8006AA076 /* DStorageKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +126,15 @@
 				592AAB8322D89F9B007D0C34 /* TableCellControlableProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		59BB81F422DF1EF8006AA076 /* DStorageKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				59BB81F522DF1EF8006AA076 /* DStorageKitTests.swift */,
+				59BB81F722DF1EF8006AA076 /* Info.plist */,
+			);
+			path = DStorageKitTests;
 			sourceTree = "<group>";
 		};
 		59D6336522DC9E7C000A6639 /* Section */ = {
@@ -162,16 +196,38 @@
 			productReference = 592AAB6D22D89F8A007D0C34 /* DStorageKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		59BB81F222DF1EF8006AA076 /* DStorageKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59BB81FD22DF1EF8006AA076 /* Build configuration list for PBXNativeTarget "DStorageKitTests" */;
+			buildPhases = (
+				59BB81EF22DF1EF8006AA076 /* Sources */,
+				59BB81F022DF1EF8006AA076 /* Frameworks */,
+				59BB81F122DF1EF8006AA076 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59BB81FA22DF1EF8006AA076 /* PBXTargetDependency */,
+			);
+			name = DStorageKitTests;
+			productName = DStorageKitTests;
+			productReference = 59BB81F322DF1EF8006AA076 /* DStorageKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		592AAB6422D89F8A007D0C34 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Roman Novikov";
 				TargetAttributes = {
 					592AAB6C22D89F8A007D0C34 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					59BB81F222DF1EF8006AA076 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -189,12 +245,20 @@
 			projectRoot = "";
 			targets = (
 				592AAB6C22D89F8A007D0C34 /* DStorageKit */,
+				59BB81F222DF1EF8006AA076 /* DStorageKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		592AAB6B22D89F8A007D0C34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59BB81F122DF1EF8006AA076 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,7 +285,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59BB81EF22DF1EF8006AA076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59BB81F622DF1EF8006AA076 /* DStorageKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59BB81FA22DF1EF8006AA076 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592AAB6C22D89F8A007D0C34 /* DStorageKit */;
+			targetProxy = 59BB81F922DF1EF8006AA076 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		592AAB7322D89F8A007D0C34 /* Debug */ = {
@@ -396,6 +476,42 @@
 			};
 			name = Release;
 		};
+		59BB81FB22DF1EF8006AA076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK6YXN3JSY;
+				INFOPLIST_FILE = DStorageKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.solbegSoft.DStorageKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59BB81FC22DF1EF8006AA076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WK6YXN3JSY;
+				INFOPLIST_FILE = DStorageKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.solbegSoft.DStorageKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +529,15 @@
 			buildConfigurations = (
 				592AAB7622D89F8A007D0C34 /* Debug */,
 				592AAB7722D89F8A007D0C34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59BB81FD22DF1EF8006AA076 /* Build configuration list for PBXNativeTarget "DStorageKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59BB81FB22DF1EF8006AA076 /* Debug */,
+				59BB81FC22DF1EF8006AA076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

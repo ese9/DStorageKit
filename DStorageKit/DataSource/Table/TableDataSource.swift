@@ -17,6 +17,10 @@ open class TableDataSource: NSObject {
     private var _sections: [TableSectionProtocol] = []
     private var _innerSections: [String: TableSectionProtocol] = [:]
     
+    public var sectionsCount: Int {
+        return _sections.count
+    }
+    
     public func addNewSection(with keyName: String, _ section: TableSectionProtocol) {
         _sections.append(section)
         _sections.sort { $0.sectionPriority < $1.sectionPriority }
