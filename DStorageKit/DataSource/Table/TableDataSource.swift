@@ -18,6 +18,7 @@ open class TableDataSource: NSObject {
     private var _innerSections: [String: TableSectionProtocol] = [:]
     
     public func addNewSection(with keyName: String, _ section: TableSectionProtocol) {
+        removeSection(with: keyName)
         _sections.append(section)
         _sections.sort { $0.sectionPriority < $1.sectionPriority }
         _innerSections[keyName] = section
@@ -62,6 +63,52 @@ open class TableDataSource: NSObject {
             tableView.deleteRows(at: indexPaths, with: .none)
         }
     }
+    
+    public func expandSection(in tableView: UITableView, with key: String) {
+        
+        guard let section = _innerSections[key],
+            let index = getSectionIndex(key: key) else { return }
+        
+        var indexPaths: [IndexPath] = []
+        
+        for row in 0..<section.originRowsCount {
+            let indexPath = IndexPath(row: row, section: index)
+            indexPaths.append(indexPath)
+        }
+        
+        if indexPaths.count == 0 { return }
+        
+        section.expandSection()
+        
+        DispatchQueue.main.async {
+            tableView.insertRows(at: indexPaths, with: .fade)
+        }
+    }
+    
+    public func collapseSection(in tableView: UITableView, with key: String) {
+        guard let section = _innerSections[key],
+            let index = getSectionIndex(key: key) else { return }
+        
+        var indexPaths: [IndexPath] = []
+        
+        for row in 0..<section.originRowsCount {
+            let indexPath = IndexPath(row: row, section: index)
+            indexPaths.append(indexPath)
+        }
+        
+        if indexPaths.count == 0 { return }
+        
+        indexPaths.forEach {
+            if let cell = tableView.cellForRow(at: $0) {
+                section.cellRemoved(at: $0.row, cell: cell)
+            }
+        }
+        
+        section.collapseSection()
+        DispatchQueue.main.async {
+            tableView.deleteRows(at: indexPaths, with: .none)
+        }
+    }
 }
 
 extension TableDataSource: UITableViewDataSource {
@@ -76,8 +123,9 @@ extension TableDataSource: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = _sections[indexPath.section]
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: section.cellType(for: indexPath.row)))
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: section.cellType(for: indexPath.row)))!
+        section.cellPrepared(at: indexPath.row, cell: cell)
+        return cell
     }
 }
 
@@ -88,8 +136,8 @@ extension TableDataSource: UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-         let section = _sections[indexPath.section]
-         section.cellAdded(at: indexPath.row, cell: cell)
+        let section = _sections[indexPath.section]
+        section.cellAdded(at: indexPath.row, cell: cell)
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

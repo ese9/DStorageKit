@@ -13,10 +13,10 @@ public protocol CellWrapperProtocol: CellWrapperConfig,
 
 open class CellWrapper<T: UITableViewCell, U: TableSectionConfig>: CellWrapperConfig, CellWrapperProtocol, TableCellActionableProtocol {
     
-    
     public weak var wrapperOwner: U?
     
     // Abstract functions
+    open func onCellPreparedInSection(at index: Int, cell: T) {}
     open func onCellAddedToSection(at index: Int, cell: T) {}
     open func onCellSelectedInSection(at index: Int, cell: T) {}
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
@@ -31,8 +31,15 @@ open class CellWrapper<T: UITableViewCell, U: TableSectionConfig>: CellWrapperCo
 }
 
 extension CellWrapper: TableCellControlableProtocol {
+    
     public final func cellType(for row: Int) -> UITableViewCell.Type {
         return T.self
+    }
+    
+    public func cellPrepared(at index: Int, cell: UITableViewCell) {
+        guard let validCell = cell as? T else { return }
+        self._cell = cell as? T
+        onCellPreparedInSection(at: index, cell: validCell)
     }
     
     public final func cellAdded(at index: Int, cell: UITableViewCell) {

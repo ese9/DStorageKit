@@ -28,9 +28,7 @@ open class TableSection<T: UITableViewCell>: TableSectionConfig, TableSectionPro
         }
     }
     
-    public var isSectionCollapsed: Bool {
-        return activeRowsCount == 0
-    }
+    public private(set) var isSectionCollapsed: Bool = false
     
     public override init(priority: Int, minRowsCount: Int = 1, maxRowsCount: Int = 1) {
         super.init(priority: priority, minRowsCount: minRowsCount, maxRowsCount: maxRowsCount)
@@ -43,6 +41,7 @@ open class TableSection<T: UITableViewCell>: TableSectionConfig, TableSectionPro
     }
     
     // MARK: Abstract functions
+    open func onCellPreparedInSection(at index: Int, cell: T) {}
     open func onCellAddedToSection(at index: Int, cell: T) {}
     open func onCellRemovedFromSection(at index: Int, cell: T) {}
     open func onCellSelectedInSection(at index: Int, cell: T) {}
@@ -52,6 +51,12 @@ open class TableSection<T: UITableViewCell>: TableSectionConfig, TableSectionPro
 }
 
 extension TableSection: TableCellControlableProtocol {
+    public func cellPrepared(at index: Int, cell: UITableViewCell) {
+        guard let validCell = cell as? T else { return }
+        _cells[index] = validCell
+        onCellPreparedInSection(at: index, cell: validCell)
+    }
+    
     public final func cellAdded(at index: Int, cell: UITableViewCell) {
         guard let validCell = cell as? T else { return }
         _cells[index] = validCell
@@ -78,9 +83,11 @@ extension TableSection: TableCellControlableProtocol {
 extension TableSection: TableSectionActionableProtocol {
     public func collapseSection() {
         activeRowsCount = 0
+        isSectionCollapsed = true
     }
     
     public func expandSection() {
         activeRowsCount = originRowsCount
+        isSectionCollapsed = false
     }
 }

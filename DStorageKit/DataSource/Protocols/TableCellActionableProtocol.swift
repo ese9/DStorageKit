@@ -10,6 +10,7 @@ import UIKit
 
 public protocol TableCellActionableProtocol: class {
     associatedtype T: UITableViewCell
+    func onCellPreparedInSection(at index: Int, cell: T)
     func onCellAddedToSection(at index: Int, cell: T)
     func onCellSelectedInSection(at index: Int, cell: T)
     func onCellRemovedFromSection(at index: Int, cell: T)
